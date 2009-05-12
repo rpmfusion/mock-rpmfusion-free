@@ -1,6 +1,6 @@
 Name:           mock-rpmfusion-free
-Version:        10.1
-Release:        2%{?dist}
+Version:        11.0
+Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
 Group:          Development/Tools
@@ -40,8 +40,8 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
-* Sun Mar 29 2009 Thorsten Leemhuis <fedora [AT] leemhuis [DOT] info> - 10.1-2
-- rebuild for new F11 features
+* Tue May 12 2009 kwizart < kwizart at gmail.com > - 11.0-1
+- Branch for F-11
 
 * Wed Mar  4 2009 kwizart < kwizart at gmail.com > - 10.1-1
 - Update to 10.1
