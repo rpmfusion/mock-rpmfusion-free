@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-free
-Version:        10.1
+Version:        11.0
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
@@ -40,6 +40,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Tue May 12 2009 kwizart < kwizart at gmail.com > - 11.0-1
+- Branch for F-11
+
 * Wed Mar  4 2009 kwizart < kwizart at gmail.com > - 10.1-1
 - Update to 10.1
 - Fix Rawhide dist to .f11
