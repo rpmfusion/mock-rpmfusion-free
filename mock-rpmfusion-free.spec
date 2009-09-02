@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-free
-Version:        11.0
+Version:        11.1
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
@@ -40,6 +40,12 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Wed Sep  2 2009 kwizart < kwizart at gmail.com > - 11.1-1
+- Sync epel 4/5 (Moved to koji, removed plague reference)
+
+* Fri Jul 31 2009 kwizart < kwizart at gmail.com > - 11.0-2
+- Switch to target i686 on x86 for Rawhide F-12
+
 * Tue May 12 2009 kwizart < kwizart at gmail.com > - 11.0-1
 - Branch for F-11
 
