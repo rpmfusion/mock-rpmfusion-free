@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-free
-Version:        11.1
+Version:        12.0
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
@@ -40,6 +40,11 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Wed Nov  4 2009 kwizart < kwizart at gmail.com > - 12.0-1
+- Update to 12.0 (i686 by default)
+- Provides some macros
+- Fix fedora koji local repository
+
 * Wed Sep  2 2009 kwizart < kwizart at gmail.com > - 11.1-1
 - Sync epel 4/5 (Moved to koji, removed plague reference)
 
