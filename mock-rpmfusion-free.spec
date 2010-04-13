@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-free
-Version:        12.1
+Version:        13.0
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
@@ -40,6 +40,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Tue Apr 13 2010 Nicolas Chauvet <kwizart@fedoraproject.org> - 13.0-1
+- Update to 13.0
+
 * Sat Nov 14 2009 Nicolas Chauvet <kwizart@fedoraproject.org> - 12.1-1
 - Resync with mock 0.19 (update local repos)
 - ccache is now available on EL5
