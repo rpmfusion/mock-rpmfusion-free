@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-free
-Version:        13.0
+Version:        14.0
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
@@ -40,6 +40,11 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Mon Oct 11 2010 Nicolas Chauvet <kwizart@fedoraproject.org> - 14.0-1
+- Update to 14.0
+- Fix syslog user
+- Initiate epel-6 files
+
 * Tue Apr 13 2010 Nicolas Chauvet <kwizart@fedoraproject.org> - 13.0-1
 - Update to 13.0
 
