@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-free
-Version:        14.0
+Version:        15.0
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
@@ -40,6 +40,11 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Wed Jun 15 2011 Nicolas Chauvet <kwizart@fedoraproject.org> - 15.0-1
+- Update to 15.0
+- Sync with mock-1.1.10
+- Add secondary arches (arm,sparc,sparc64,s390x).
+
 * Mon Oct 11 2010 Nicolas Chauvet <kwizart@fedoraproject.org> - 14.0-1
 - Update to 14.0
 - Fix syslog user
