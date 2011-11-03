@@ -1,6 +1,6 @@
 Name:           mock-rpmfusion-free
 Version:        15.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
 Group:          Development/Tools
@@ -40,6 +40,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Thu Nov 03 2011 Nicolas Chauvet <kwizart@gmail.com> - 15.1-2
+- Rebuild for dist F-16
+
 * Sun Jul 31 2011 Nicolas Chauvet <kwizart@fedoraproject.org> - 15.1-1
 - Add Support for EL6 - rfbz#1862 & rfbz#1864
 - Obsolete F13 config files
