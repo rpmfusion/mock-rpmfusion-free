@@ -1,6 +1,6 @@
 Name:           mock-rpmfusion-free
-Version:        15.1
-Release:        2%{?dist}
+Version:        17.0
+Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
 Group:          Development/Tools
@@ -40,8 +40,11 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
-* Thu Nov 03 2011 Nicolas Chauvet <kwizart@gmail.com> - 15.1-2
-- Rebuild for dist F-16
+* Wed Mar  8 2012 Nicolas Chauvet <kwizart@gmail.com> - 17.0-1
+- Bump to 17.0
+- Introduce armhfp for 15 17 rawhide
+- Drop the multilib workaround
+- Update dist-f??-build to f??-build
 
 * Sun Jul 31 2011 Nicolas Chauvet <kwizart@fedoraproject.org> - 15.1-1
 - Add Support for EL6 - rfbz#1862 & rfbz#1864
