@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-free
-Version:        17.0
+Version:        17.1
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
@@ -40,6 +40,11 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Sun Jun 24 2012 Nicolas Chauvet <kwizart@gmail.com> - 17.1-1
+- Switch baseurl to fedora-secondary
+- Fix koji local URL on secondary arches
+- Disable testing repos on EL
+
 * Wed Mar  8 2012 Nicolas Chauvet <kwizart@gmail.com> - 17.0-1
 - Bump to 17.0
 - Introduce armhfp for 15 17 rawhide
