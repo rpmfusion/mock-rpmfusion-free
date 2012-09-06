@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-free
-Version:        17.1
+Version:        18.0
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
@@ -40,6 +40,12 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Thu Sep  6 2012 Nicolas Chauvet <kwizart@gmail.com> - 18.0-1
+- Update to 18.0
+- Remove fedora-14 and fedora-15
+- Fix Rawhide repo - rfbz#2431
+- Sync with mock layout (debug repo)
+
 * Sun Jun 24 2012 Nicolas Chauvet <kwizart@gmail.com> - 17.1-1
 - Switch baseurl to fedora-secondary
 - Fix koji local URL on secondary arches
