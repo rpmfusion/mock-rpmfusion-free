@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-free
-Version:        19.0
+Version:        19.1
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
@@ -40,6 +40,10 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Sun Jul 28 2013 Nicolas Chauvet <kwizart@gmail.com> - 19.1-1
+- Update to 19.1
+- Add kernel-override repository - disabled by default
+
 * Tue Apr  2 2013 Nicolas Chauvet <kwizart@gmail.com> - 19.0-1
 - Add fedora-19
 
