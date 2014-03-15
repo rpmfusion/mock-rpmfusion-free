@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-free
-Version:        20.0
+Version:        20.1
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
@@ -40,6 +40,12 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Sat Mar 15 2014 Nicolas Chauvet <kwizart@gmail.com> - 20.1-1
+- Fix rawhide kernel-nodebug - rfbz#3127
+- Drop rawhide sparc
+- sync with mock for fedora and el
+- Introduce preliminary config for el7
+
 * Sun Dec 15 2013 Nicolas Chauvet <kwizart@gmail.com> - 20.0-1
 - Update to 20.0
 - Add rpmfusion-kernel-devel-override
@@ -73,7 +79,7 @@ rm -rf $RPM_BUILD_ROOT
 - Fix koji local URL on secondary arches
 - Disable testing repos on EL
 
-* Wed Mar  8 2012 Nicolas Chauvet <kwizart@gmail.com> - 17.0-1
+* Thu Mar  8 2012 Nicolas Chauvet <kwizart@gmail.com> - 17.0-1
 - Bump to 17.0
 - Introduce armhfp for 15 17 rawhide
 - Drop the multilib workaround
