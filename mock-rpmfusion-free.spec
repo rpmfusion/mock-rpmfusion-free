@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-free
-Version:        20.1
+Version:        22.0
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
@@ -40,6 +40,14 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Sun May 24 2015 Nicolas Chauvet <kwizart@gmail.com> - 22.0-1
+- Update to 22.0
+
+* Sun Dec  7 2014 Nicolas Chauvet <kwizart@gmail.com> - 21.0-1
+- Update to 21.0
+- Fix armhfp is primary since f20
+- sync with fedora mock
+
 * Sat Mar 15 2014 Nicolas Chauvet <kwizart@gmail.com> - 20.1-1
 - Fix rawhide kernel-nodebug - rfbz#3127
 - Drop rawhide sparc
