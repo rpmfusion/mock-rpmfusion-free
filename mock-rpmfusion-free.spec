@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-free
-Version:        23.0
+Version:        24.0
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
@@ -40,6 +40,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Fri Jul  1 2016 Nicolas Chauvet <kwizart@gmail.com> - 24.0-1
+- Update to 24.0
+
 * Tue Nov 10 2015 Nicolas Chauvet <kwizart@gmail.com> - 23.0-1
 - Update to 23.0
 
