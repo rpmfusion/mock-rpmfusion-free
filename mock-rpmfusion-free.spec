@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-free
-Version:        25.0
+Version:        25.1
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
@@ -10,7 +10,7 @@ Source0:        %{name}-%{version}.tar.bz2
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildArch:      noarch
-Requires:       mock
+Requires:       mock >= 1.2.19
 
 %description
 Mock config files for the RPM Fusion Free Repository
@@ -40,6 +40,12 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Thu Nov 10 2016 Sérgio Basto <sergio@serjux.com> - 25.1-1
+- Update package requires to mock >= 1.2.19
+- Bug fix.
+- Add local repo, useful for epel builds.
+- Use include include statement
+
 * Tue Aug 09 2016 Sérgio Basto <sergio@serjux.com> - 25.0-1
 - Update to 25.0
 
