@@ -1,13 +1,12 @@
 Name:           mock-rpmfusion-free
-Version:        25.1
+Version:        25.2
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
 Group:          Development/Tools
 License:        BSD
-URL:            http://rpmfusion.org/
-Source0:        %{name}-%{version}.tar.bz2
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+URL:            https://rpmfusion.org/
+Source0:        https://github.com/rpmfusion-infra/mock-rpmfusion/releases/download/%{version}/%{name}-%{version}.tar.bz2
 
 BuildArch:      noarch
 Requires:       mock >= 1.2.19
@@ -25,13 +24,8 @@ Mock config files for the RPM Fusion Free Repository
 
 
 %install
-rm -rf $RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT%{_sysconfdir}/mock
-install -pm 0644 *.cfg $RPM_BUILD_ROOT%{_sysconfdir}/mock
-
-
-%clean
-rm -rf $RPM_BUILD_ROOT
+mkdir -p %{buildroot}%{_sysconfdir}/mock
+install -pm 0644 etc/mock/*_free.cfg %{buildroot}%{_sysconfdir}/mock
 
 
 %files
@@ -40,6 +34,24 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Thu Jan 05 2017 Sérgio Basto <sergio@serjux.com> - 25.2-1
+- Fix el-round.sh typo
+- Not include rpmfusion-buildsys-epel-template
+  This template may will be need when we got back kmod building, we will need
+  a special repo with new kernels until have something like it, we dont need this
+  template, buildsys_override repos for each branch is in
+  rpmfusion-free-epel-template and rpmfusion-nonfree-epel-template, also add
+  configure: cost=2000 like in other cases of koji configurations.
+- Print and remove obsoleted .cfg files.
+- Enable gpgkeys
+- Switch to metalink over https
+- Organization: move all .cfg files to etc/mock directory
+- Organization: Move templates not in use to not_in_use directory
+- Update *.spec.in files according new locations of files.
+- Clean trailings whitespaces.
+- Clean up/modernize spec file, use %{buildroot} macro
+- Also run ./round.sh and ./el-round.sh with make
+
 * Thu Nov 10 2016 Sérgio Basto <sergio@serjux.com> - 25.1-1
 - Update package requires to mock >= 1.2.19
 - Bug fix.
