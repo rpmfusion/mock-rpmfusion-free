@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-free
-Version:        25.2
+Version:        26.0
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
@@ -34,6 +34,10 @@ install -pm 0644 etc/mock/*_free.cfg %{buildroot}%{_sysconfdir}/mock
 
 
 %changelog
+* Thu Mar 02 2017 Sérgio Basto <sergio@serjux.com> - 26.0-1
+- Add configuration files for Fedora 26
+- Remove Configuration files for Fedora 23
+
 * Thu Jan 05 2017 Sérgio Basto <sergio@serjux.com> - 25.2-1
 - Fix el-round.sh typo
 - Not include rpmfusion-buildsys-epel-template
