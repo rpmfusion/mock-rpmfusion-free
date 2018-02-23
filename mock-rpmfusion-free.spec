@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-free
-Version:        27.0
+Version:        27.1
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
@@ -34,9 +34,17 @@ install -pm 0644 etc/mock/*_free.cfg %{buildroot}%{_sysconfdir}/mock
 
 
 %changelog
+* Fri Feb 23 2018 Sérgio Basto <sergio@serjux.com> - 27.1-1
+- Move rpmfusion buildroot to branch F28
+- Prepare new version and drop F25
+- Fix locations of fedora-secondary arches
+
 * Tue Aug 22 2017 Sérgio Basto <sergio@serjux.com> - 27.0-1
 - Add configuration files for Fedora 27
 - Remove Configuration files for Fedora 24
+
+* Sun Mar 26 2017 RPM Fusion Release Engineering <kwizart@rpmfusion.org> - 26.0-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_26_Mass_Rebuild
 
 * Thu Mar 02 2017 Sérgio Basto <sergio@serjux.com> - 26.0-1
 - Add configuration files for Fedora 26
