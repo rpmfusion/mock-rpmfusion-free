@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-free
-Version:        27.1
+Version:        28.0
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
@@ -34,6 +34,9 @@ install -pm 0644 etc/mock/*_free.cfg %{buildroot}%{_sysconfdir}/mock
 
 
 %changelog
+* Mon Mar 05 2018 Sérgio Basto <sergio@serjux.com> - 28.0-1
+- Ready for branch F28
+
 * Fri Feb 23 2018 Sérgio Basto <sergio@serjux.com> - 27.1-1
 - Move rpmfusion buildroot to branch F28
 - Prepare new version and drop F25
