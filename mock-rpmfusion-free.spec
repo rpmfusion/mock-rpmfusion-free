@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-free
-Version:        28.0
+Version:        28.1
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
@@ -34,6 +34,14 @@ install -pm 0644 etc/mock/*_free.cfg %{buildroot}%{_sysconfdir}/mock
 
 
 %changelog
+* Fri Jun 01 2018 Sérgio Basto <sergio@serjux.com> - 18.1-1
+- make (for F28 GA)
+- F28 is not branched anymore
+- In nonfree use include free repo instead of copy it
+- In kwizart repo use include nonfree repo instead copy free and nonfree repos
+- Rename templates to match with the name of repos to simplify the script
+- Move branched-templates from not_in_use dir and update it
+
 * Mon Mar 05 2018 Sérgio Basto <sergio@serjux.com> - 28.0-1
 - Ready for branch F28
 
