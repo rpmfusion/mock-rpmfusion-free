@@ -34,7 +34,10 @@ install -pm 0644 etc/mock/*_free.cfg %{buildroot}%{_sysconfdir}/mock
 
 
 %changelog
-* Fri Jun 01 2018 Sérgio Basto <sergio@serjux.com> - 18.1-1
+* Sat Jun 02 2018 Sérgio Basto <sergio@serjux.com> - 28.1-2
+- Fix changelog version
+
+* Fri Jun 01 2018 Sérgio Basto <sergio@serjux.com> - 28.1-1
 - make (for F28 GA)
 - F28 is not branched anymore
 - In nonfree use include free repo instead of copy it
