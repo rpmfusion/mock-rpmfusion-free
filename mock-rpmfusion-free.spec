@@ -1,6 +1,6 @@
 Name:           mock-rpmfusion-free
 Version:        28.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
 Group:          Development/Tools
