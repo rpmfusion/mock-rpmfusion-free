@@ -1,6 +1,6 @@
 Name:           mock-rpmfusion-free
 Version:        28.1
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
 Group:          Development/Tools
@@ -34,6 +34,9 @@ install -pm 0644 etc/mock/*_free.cfg %{buildroot}%{_sysconfdir}/mock
 
 
 %changelog
+* Fri Jul 27 2018 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 28.1-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_29_Mass_Rebuild
+
 * Sat Jun 02 2018 Sérgio Basto <sergio@serjux.com> - 28.1-2
 - Fix changelog version
 
