@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-free
-Version:        29.0
+Version:        29.1
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
@@ -9,7 +9,7 @@ URL:            https://rpmfusion.org/
 Source0:        https://github.com/rpmfusion-infra/mock-rpmfusion/releases/download/%{version}/%{name}-%{version}.tar.bz2
 
 BuildArch:      noarch
-Requires:       mock-core-configs >= 29.0
+Requires:       mock-core-configs >= 29.1
 
 %description
 Mock config files for the RPM Fusion Free Repository
@@ -34,10 +34,14 @@ install -pm 0644 etc/mock/*_free.cfg %{buildroot}%{_sysconfdir}/mock
 
 
 %changelog
-* Thu Aug 30 2018 Sérgio Basto <sergio@serjux.com> - 29.0-2
+* Mon Oct 29 2018 Sérgio Basto <sergio@serjux.com> - 29.1-1
+- F29 GA
+
+* Thu Aug 30 2018 Sérgio Basto <sergio@serjux.com> - 29.0-1
 - Add F29 branch and drop F26
 - Not include s390x configs (RPMFusion don't have it)
 - Include README.txt to help on make these packages.
+- Requires: mock-core-configs >= @VERSION@ instead mock itself
 
 * Sat Jun 02 2018 Sérgio Basto <sergio@serjux.com> - 28.1-2
 - Fix changelog version
