@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-free
-Version:        29.1
+Version:        30.0
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
@@ -9,7 +9,7 @@ URL:            https://rpmfusion.org/
 Source0:        https://github.com/rpmfusion-infra/mock-rpmfusion/releases/download/%{version}/%{name}-%{version}.tar.bz2
 
 BuildArch:      noarch
-Requires:       mock-core-configs >= 29.1
+Requires:       mock-core-configs >= 30.0
 
 %description
 Mock config files for the RPM Fusion Free Repository
@@ -34,6 +34,9 @@ install -pm 0644 etc/mock/*_free.cfg %{buildroot}%{_sysconfdir}/mock
 
 
 %changelog
+* Wed Mar 06 2019 Sérgio Basto <sergio@serjux.com> - 30.0-1
+- RPMFusion Rawhide pointing to F30 branched
+
 * Mon Oct 29 2018 Sérgio Basto <sergio@serjux.com> - 29.1-1
 - F29 GA
 
