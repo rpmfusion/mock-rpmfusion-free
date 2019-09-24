@@ -1,6 +1,6 @@
 Name:           mock-rpmfusion-free
 Version:        31.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
 Group:          Development/Tools
@@ -9,7 +9,7 @@ URL:            https://rpmfusion.org/
 Source0:        https://github.com/rpmfusion-infra/mock-rpmfusion/releases/download/%{version}/%{name}-%{version}.tar.bz2
 
 BuildArch:      noarch
-Requires:       mock-core-configs >= 30
+Requires:       mock-core-configs >= 31.4
 
 %description
 Mock config files for the RPM Fusion Free Repository
@@ -34,6 +34,9 @@ install -pm 0644 etc/mock/*_free.cfg %{buildroot}%{_sysconfdir}/mock
 
 
 %changelog
+* Tue Sep 24 2019 Sérgio Basto <sergio@serjux.com> - 31.1-2
+- Requires mock-core-configs >= 31.4
+
 * Tue Sep 24 2019 Sérgio Basto <sergio@serjux.com> - 31.0-2
 - And Centos 8
 
