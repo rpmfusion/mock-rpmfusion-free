@@ -1,12 +1,12 @@
 Name:           mock-rpmfusion-free
-Version:        31.1
-Release:        2%{?dist}
+Version:        31.2
+Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
-Group:          Development/Tools
 License:        BSD
 URL:            https://rpmfusion.org/
 Source0:        https://github.com/rpmfusion-infra/mock-rpmfusion/releases/download/%{version}/%{name}-%{version}.tar.bz2
+Source1:        https://admin.rpmfusion.org/accounts/rpmfusion-server-ca.cert
 
 BuildArch:      noarch
 Requires:       mock-core-configs >= 31.4
@@ -26,18 +26,20 @@ Mock config files for the RPM Fusion Free Repository
 %install
 mkdir -p %{buildroot}%{_sysconfdir}/mock
 install -pm 0644 etc/mock/*_free.cfg %{buildroot}%{_sysconfdir}/mock
+mkdir -p %{buildroot}%{_sysconfdir}/pki/mock/
+install -pm 0644 %{SOURCE1} %{buildroot}%{_sysconfdir}/pki/mock/rpmfusion-server-ca.cert
 
 
 %files
-%defattr(-,root,root,-)
 %config(noreplace) %{_sysconfdir}/mock/*_free.cfg
+%{_sysconfdir}/pki/mock/rpmfusion-server-ca.cert
 
 
 %changelog
-* Tue Sep 24 2019 Sérgio Basto <sergio@serjux.com> - 31.1-2
-- Requires mock-core-configs >= 31.4
+* Thu Dec 26 2019 Sérgio Basto <sergio@serjux.com> - 31.2-1
+- Allow --enablerepo=rpmfusion-{non,}free-override to work out of the box
 
-* Tue Sep 24 2019 Sérgio Basto <sergio@serjux.com> - 31.0-2
+* Tue Sep 24 2019 Sérgio Basto <sergio@serjux.com> - 31.1-1
 - And Centos 8
 
 * Mon Aug 26 2019 Sérgio Basto <sergio@serjux.com> - 31.0-1
