@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-free
-Version:        31.2
+Version:        32.0
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
@@ -36,8 +36,14 @@ install -pm 0644 %{SOURCE1} %{buildroot}%{_sysconfdir}/pki/mock/rpmfusion-server
 
 
 %changelog
+* Tue Feb 18 2020 Sérgio Basto <sergio@serjux.com> - 31.2-2
+- F32 Branch and the forgotten F31 GA
+
 * Thu Dec 26 2019 Sérgio Basto <sergio@serjux.com> - 31.2-1
 - Allow --enablerepo=rpmfusion-{non,}free-override to work out of the box
+
+* Tue Sep 24 2019 Sérgio Basto <sergio@serjux.com> - 31.1-2
+- Requires mock-core-configs >= 31.4
 
 * Tue Sep 24 2019 Sérgio Basto <sergio@serjux.com> - 31.1-1
 - And Centos 8
