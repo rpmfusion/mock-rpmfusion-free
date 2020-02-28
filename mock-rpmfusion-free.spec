@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-free
-Version:        32.0
+Version:        32.1
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
@@ -9,7 +9,7 @@ Source0:        https://github.com/rpmfusion-infra/mock-rpmfusion/releases/downl
 Source1:        https://admin.rpmfusion.org/accounts/rpmfusion-server-ca.cert
 
 BuildArch:      noarch
-Requires:       mock-core-configs >= 31.4
+Requires:       mock >= 2.0
 
 %description
 Mock config files for the RPM Fusion Free Repository
@@ -36,6 +36,9 @@ install -pm 0644 %{SOURCE1} %{buildroot}%{_sysconfdir}/pki/mock/rpmfusion-server
 
 
 %changelog
+* Sun Feb 23 2020 Sérgio Basto <sergio@serjux.com> - 32.1-1
+- Configurations for Mock-2.0
+
 * Tue Feb 18 2020 Sérgio Basto <sergio@serjux.com> - 32.0-1
 - F32 Branch and the forgotten F31 GA
 
