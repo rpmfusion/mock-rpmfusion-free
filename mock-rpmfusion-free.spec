@@ -1,12 +1,11 @@
 Name:           mock-rpmfusion-free
-Version:        33.1
+Version:        33.2
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
 License:        BSD
 URL:            https://rpmfusion.org/
 Source0:        https://github.com/rpmfusion-infra/mock-rpmfusion/releases/download/%{version}/%{name}-%{version}.tar.bz2
-Source1:        https://admin.rpmfusion.org/accounts/rpmfusion-server-ca.cert
 
 BuildArch:      noarch
 Requires:       mock-core-configs >= 32.7
@@ -27,15 +26,17 @@ Mock config files for the RPM Fusion Free Repository
 mkdir -p %{buildroot}%{_sysconfdir}/mock
 install -pm 0644 etc/mock/*_free.cfg %{buildroot}%{_sysconfdir}/mock
 mkdir -p %{buildroot}%{_sysconfdir}/pki/mock/
-install -pm 0644 %{SOURCE1} %{buildroot}%{_sysconfdir}/pki/mock/RPM-GPG-KEY-rpmfusion-server-ca.cert
 
 
 %files
 %config(noreplace) %{_sysconfdir}/mock/*_free.cfg
-%{_sysconfdir}/pki/mock/RPM-GPG-KEY-rpmfusion-server-ca.cert
 
 
 %changelog
+* Sun Jan 17 2021 Sérgio Basto <sergio@serjux.com> - 33.2-1
+- Remove sslcacert on mock configurations because we don't need it anymore,
+  koji have a LE certificate
+
 * Fri Oct 16 2020 Sérgio Basto <sergio@serjux.com> - 33.1-1
 - F33 GA
 
