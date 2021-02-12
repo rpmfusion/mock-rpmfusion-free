@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-free
-Version:        33.2
+Version:        34.0
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
@@ -33,6 +33,9 @@ mkdir -p %{buildroot}%{_sysconfdir}/pki/mock/
 
 
 %changelog
+* Fri Feb 12 2021 Sérgio Basto <sergio@serjux.com> - 34.0-1
+- F34 branched
+
 * Sun Jan 17 2021 Sérgio Basto <sergio@serjux.com> - 33.2-1
 - Remove sslcacert on mock configurations because we don't need it anymore,
   koji have a LE certificate
