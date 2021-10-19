@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-free
-Version:        35.1
+Version:        35.2
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
@@ -25,14 +25,19 @@ Mock config files for the RPM Fusion Free Repository
 %install
 mkdir -p %{buildroot}%{_sysconfdir}/mock
 install -pm 0644 etc/mock/*_free.cfg %{buildroot}%{_sysconfdir}/mock
-mkdir -p %{buildroot}%{_sysconfdir}/pki/mock/
+mkdir -p %{buildroot}%{_sysconfdir}/mock/templates
+install -pm 0644 etc/mock/templates/*.tpl %{buildroot}%{_sysconfdir}/mock/templates
 
 
 %files
 %config(noreplace) %{_sysconfdir}/mock/*_free.cfg
+%config(noreplace) %{_sysconfdir}/mock/templates/*.tpl
 
 
 %changelog
+* Wed Oct 13 2021 Sérgio Basto <sergio@serjux.com> - 35.2-1
+- Templating
+
 * Mon Sep 13 2021 Sérgio Basto <sergio@serjux.com> - 35.1-1
 - v2 of add gpgcheck on updates-testing, debuginfo and branched repos
   commit 373c52a was incompleted
