@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-free
-Version:        35.2
+Version:        35.3
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
@@ -35,6 +35,9 @@ install -pm 0644 etc/mock/templates/*.tpl %{buildroot}%{_sysconfdir}/mock/templa
 
 
 %changelog
+* Tue Nov 02 2021 Sérgio Basto <sergio@serjux.com> - 35.3-1
+- RPM Fusion F35 Release
+
 * Wed Oct 13 2021 Sérgio Basto <sergio@serjux.com> - 35.2-1
 - Templating
 
@@ -45,6 +48,7 @@ install -pm 0644 etc/mock/templates/*.tpl %{buildroot}%{_sysconfdir}/mock/templa
 
 * Sun Aug 15 2021 Sérgio Basto <sergio@serjux.com> - 35.0-1
 - F35 Branched
+- Add gpgcheck on updates-testing, debuginfo and branched repos
 
 * Tue Apr 27 2021 Sérgio Basto <sergio@serjux.com> - 34.1-1
 - F34 GA
