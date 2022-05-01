@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-free
-Version:        36.0
+Version:        36.1
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
@@ -27,14 +27,41 @@ mkdir -p %{buildroot}%{_sysconfdir}/mock
 install -pm 0644 etc/mock/*_free.cfg %{buildroot}%{_sysconfdir}/mock
 mkdir -p %{buildroot}%{_sysconfdir}/mock/templates
 install -pm 0644 etc/mock/templates/*.tpl %{buildroot}%{_sysconfdir}/mock/templates
+pushd %{buildroot}%{_sysconfdir}/mock
+ln -s alma+epel-8-aarch64.cfg epel-8-aarch64.cfg
+ln -s alma+epel-8-ppc64le.cfg epel-8-ppc64le.cfg
+ln -s alma+epel-8-x86_64.cfg epel-8-x86_64.cfg
+ln -s centos-stream+epel-next-8-aarch64.cfg epel-next-8-aarch64.cfg
+ln -s centos-stream+epel-next-8-ppc64le.cfg epel-next-8-ppc64le.cfg
+ln -s centos-stream+epel-next-8-x86_64.cfg epel-next-8-x86_64.cfg
+ln -s centos-stream+epel-next-9-aarch64.cfg epel-next-9-aarch64.cfg
+ln -s centos-stream+epel-next-9-ppc64le.cfg epel-next-9-ppc64le.cfg
+ln -s centos-stream+epel-next-9-s390x.cfg epel-next-9-s390x.cfg
+ln -s centos-stream+epel-next-9-x86_64.cfg epel-next-9-x86_64.cfg
+popd
+
 
 
 %files
 %config(noreplace) %{_sysconfdir}/mock/*_free.cfg
 %config(noreplace) %{_sysconfdir}/mock/templates/*.tpl
+%{_sysconfdir}/mock/epel-8-aarch64.cfg
+%{_sysconfdir}/mock/epel-8-ppc64le.cfg
+%{_sysconfdir}/mock/epel-8-x86_64.cfg
+%{_sysconfdir}/mock/epel-next-8-aarch64.cfg
+%{_sysconfdir}/mock/epel-next-8-ppc64le.cfg
+%{_sysconfdir}/mock/epel-next-8-x86_64.cfg
+%{_sysconfdir}/mock/epel-next-9-aarch64.cfg
+%{_sysconfdir}/mock/epel-next-9-ppc64le.cfg
+%{_sysconfdir}/mock/epel-next-9-s390x.cfg
+%{_sysconfdir}/mock/epel-next-9-x86_64.cfg
 
 
 %changelog
+* Sun May 01 2022 Sérgio Basto <sergio@serjux.com> - 36.0-2
+- F36 GA
+- Add el9 repos
+
 * Sun Feb 13 2022 Sérgio Basto <sergio@serjux.com> - 36.0-1
 - F36 branch
 
