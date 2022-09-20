@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-free
-Version:        36.1
+Version:        37.0
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
@@ -41,7 +41,6 @@ ln -s centos-stream+epel-next-9-x86_64.cfg epel-next-9-x86_64.cfg
 popd
 
 
-
 %files
 %config(noreplace) %{_sysconfdir}/mock/*_free.cfg
 %config(noreplace) %{_sysconfdir}/mock/templates/*.tpl
@@ -58,12 +57,17 @@ popd
 
 
 %changelog
-* Sun May 01 2022 Sérgio Basto <sergio@serjux.com> - 36.0-2
+* Tue Sep 20 2022 Sérgio Basto <sergio@serjux.com> - 37.0-1
+- F37 branch
+
+* Sun May 01 2022 Sérgio Basto <sergio@serjux.com> - 36.1-1
 - F36 GA
 - Add el9 repos
 
 * Sun Feb 13 2022 Sérgio Basto <sergio@serjux.com> - 36.0-1
 - F36 branch
+- Drop kwizart repo (#21)
+- Add support for EPEL-next (#20)
 
 * Tue Nov 02 2021 Sérgio Basto <sergio@serjux.com> - 35.3-1
 - RPM Fusion F35 Release
