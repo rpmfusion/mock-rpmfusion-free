@@ -1,0 +1,80 @@
+From 3be5610f62afe829c43921df72b8ed983f8a7e9b Mon Sep 17 00:00:00 2001
+From: Leigh Scott <leigh123linux@gmail.com>
+Date: Tue, 30 May 2023 22:56:19 +0100
+Subject: [PATCH] Add cisco repo for ffmpeg deps
+
+---
+ etc/mock/templates/rpmfusion_free-branched.tpl | 11 +++++++++++
+ etc/mock/templates/rpmfusion_free-rawhide.tpl  | 11 +++++++++++
+ etc/mock/templates/rpmfusion_free-stable.tpl   | 11 +++++++++++
+ 3 files changed, 33 insertions(+)
+
+diff --git a/etc/mock/templates/rpmfusion_free-branched.tpl b/etc/mock/templates/rpmfusion_free-branched.tpl
+index c5df5cd..47aa2bf 100644
+--- a/etc/mock/templates/rpmfusion_free-branched.tpl
++++ b/etc/mock/templates/rpmfusion_free-branched.tpl
+@@ -53,6 +53,17 @@ gpgkey=file:///usr/share/distribution-gpg-keys/rpmfusion/RPM-GPG-KEY-rpmfusion-f
+ gpgcheck=1
+ enabled=0
+ 
++[fedora-cisco-openh264]
++name=Fedora $releasever openh264 (From Cisco) - $basearch
++metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-cisco-openh264-$releasever&arch=$basearch
++type=rpm
++enabled=1
++metadata_expire=14d
++repo_gpgcheck=0
++gpgcheck=1
++gpgkey=file:///usr/share/distribution-gpg-keys/fedora/RPM-GPG-KEY-fedora-$releasever-$basearch
++skip_if_unavailable=True
++
+ [local-free]
+ name=RPM Fusion for Fedora $releasever - Free - Local repo
+ baseurl=https://koji.rpmfusion.org/kojifiles/repos/f$releasever-free-build/latest/$basearch/
+diff --git a/etc/mock/templates/rpmfusion_free-rawhide.tpl b/etc/mock/templates/rpmfusion_free-rawhide.tpl
+index f27bf67..fb7e039 100644
+--- a/etc/mock/templates/rpmfusion_free-rawhide.tpl
++++ b/etc/mock/templates/rpmfusion_free-rawhide.tpl
+@@ -17,6 +17,17 @@ gpgkey=file:///usr/share/distribution-gpg-keys/rpmfusion/RPM-GPG-KEY-rpmfusion-f
+ gpgcheck=1
+ enabled=0
+ 
++[fedora-cisco-openh264]
++name=Fedora $releasever openh264 (From Cisco) - $basearch
++metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-cisco-openh264-$releasever&arch=$basearch
++type=rpm
++enabled=1
++metadata_expire=14d
++repo_gpgcheck=0
++gpgcheck=1
++gpgkey=file:///usr/share/distribution-gpg-keys/fedora/RPM-GPG-KEY-fedora-$releasever-$basearch
++skip_if_unavailable=True
++
+ [local-free]
+ name=RPM Fusion for Fedora Rawhide - Free - Local repo
+ baseurl=https://koji.rpmfusion.org/kojifiles/repos/f$releasever-free-build/latest/$basearch/
+diff --git a/etc/mock/templates/rpmfusion_free-stable.tpl b/etc/mock/templates/rpmfusion_free-stable.tpl
+index 746f259..4455b93 100644
+--- a/etc/mock/templates/rpmfusion_free-stable.tpl
++++ b/etc/mock/templates/rpmfusion_free-stable.tpl
+@@ -47,6 +47,17 @@ gpgkey=file:///usr/share/distribution-gpg-keys/rpmfusion/RPM-GPG-KEY-rpmfusion-f
+ gpgcheck=1
+ enabled=0
+ 
++[fedora-cisco-openh264]
++name=Fedora $releasever openh264 (From Cisco) - $basearch
++metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-cisco-openh264-$releasever&arch=$basearch
++type=rpm
++enabled=1
++metadata_expire=14d
++repo_gpgcheck=0
++gpgcheck=1
++gpgkey=file:///usr/share/distribution-gpg-keys/fedora/RPM-GPG-KEY-fedora-$releasever-$basearch
++skip_if_unavailable=True
++
+ [local-free]
+ name=RPM Fusion for Fedora $releasever - Free - Local repo
+ baseurl=https://koji.rpmfusion.org/kojifiles/repos/f$releasever-free-build/latest/$basearch/
+-- 
+2.40.1
+

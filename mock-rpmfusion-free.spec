@@ -1,11 +1,12 @@
 Name:           mock-rpmfusion-free
 Version:        38.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
 License:        BSD
 URL:            https://rpmfusion.org/
 Source0:        https://github.com/rpmfusion-infra/mock-rpmfusion/releases/download/%{version}/%{name}-%{version}.tar.bz2
+Patch1:         0001-Add-cisco-repo-for-ffmpeg-deps.patch
 
 BuildArch:      noarch
 Requires:       mock-core-configs >= 34.6
@@ -16,6 +17,7 @@ Mock config files for the RPM Fusion Free Repository
 
 %prep
 %setup -q -c
+%patch -P1 -p1
 
 
 %build
@@ -33,6 +35,9 @@ cp -a etc/mock %{buildroot}%{_sysconfdir}/mock/
 
 
 %changelog
+* Mon Jun 19 2023 Sérgio Basto <sergio@serjux.com> - 38.1-2
+- Add cisco repo for ffmpeg deps
+
 * Tue Apr 18 2023 Sérgio Basto <sergio@serjux.com> - 38.1-1
 - F38 GA
 
