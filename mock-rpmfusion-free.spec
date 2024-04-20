@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-free
-Version:        40.0
+Version:        40.1
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
@@ -33,6 +33,9 @@ cp -a etc/mock %{buildroot}%{_sysconfdir}/mock/
 
 
 %changelog
+* Sat Apr 20 2024 Sérgio Basto <sergio@serjux.com> - 40.1-1
+- F40 GA
+
 * Thu Feb 15 2024 Sérgio Basto <sergio@serjux.com> - 40.0-1
 - F40 Branched
 
