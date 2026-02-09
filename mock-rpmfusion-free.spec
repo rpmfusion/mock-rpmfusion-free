@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-free
-Version:        43.1
+Version:        44.0
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
@@ -15,7 +15,7 @@ Mock config files for the RPM Fusion Free Repository
 
 
 %prep
-%setup -q -c
+%autosetup -p1 -c
 
 
 %build
@@ -33,7 +33,14 @@ cp -a etc/mock %{buildroot}%{_sysconfdir}/mock/
 
 
 %changelog
-* Fri Oct 24 2025 Sérgio Basto <sergio@serjux.com> - 43.1-2    
+* Mon Feb 09 2026 Sérgio Basto <sergio@serjux.com> - 44.0-1
+- F44 branched
+- Remove old configurations names
+
+* Fri Nov 14 2025 Sérgio Basto <sergio@serjux.com> - 43.1-2    
+- Fix typos in template rpmfusion_nonfree-rawhide
+
+* Fri Oct 24 2025 Sérgio Basto <sergio@serjux.com> - 43.1-1    
 - F43 GA
 
 * Sat Aug 30 2025 Sérgio Basto <sergio@serjux.com> - 43.0-2
