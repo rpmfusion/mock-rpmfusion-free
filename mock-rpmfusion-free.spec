@@ -1,5 +1,5 @@
 Name:           mock-rpmfusion-free
-Version:        44.2
+Version:        45.0
 Release:        1%{?dist}
 Summary:        Mock config files for the RPM Fusion Free Repository
 
@@ -33,6 +33,9 @@ cp -a etc/mock %{buildroot}%{_sysconfdir}/mock/
 
 
 %changelog
+* Sun Aug 30 2026 Sérgio Basto <sergio@serjux.com> - 45.0-1
+- F45 branched
+
 * Fri May 08 2026 Sérgio Basto <sergio@serjux.com> - 44.2-1
 - Re-add symlinks to EPEL 8 and 9
 
